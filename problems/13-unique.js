@@ -14,14 +14,21 @@ console.log(unique(['a', 'b', 'c', 'b'])); // ['a', 'b', 'c']
 
 */
 
-let unique = function(array) {
-    // Your code here
+let unique = function (array) {
+  // Your code here
+  let unique = [];
+  array.forEach(function (val) {
+    if (!unique.includes(val)) {
+      unique.push(val);
+    }
+  });
+  return unique;
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
-    module.exports = unique;
+  module.exports = unique;
 } catch (e) {
-    module.exports = null;
-}
+  module.exports = null;
+}
